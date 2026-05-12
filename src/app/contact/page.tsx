@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { DetailPage } from "@/components/detail-page";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Contact",
+  description:
+    "Contact PlotArmour to start a project across studio, merchandise, store, product, game, or brand systems.",
+  path: "/contact",
+  keywords: ["contact PlotArmour", "start a project", "brand systems contact"],
+});
 
 export default function ContactPage() {
   return (

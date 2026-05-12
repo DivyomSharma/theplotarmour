@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { DetailPage } from "@/components/detail-page";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Store",
+  description:
+    "Browse the PlotArmour store layer for consumer fashion, in-house labels, drops, and culture-facing retail experiments.",
+  path: "/store",
+  keywords: ["store", "fashion", "consumer products", "drops", "in-house labels"],
+});
 
 export default function StorePage() {
   return (

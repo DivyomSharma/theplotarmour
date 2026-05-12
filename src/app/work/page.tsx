@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
+import { buildMetadata } from "@/lib/seo";
 import { workItems } from "@/lib/site-data";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Selected Work",
+  description:
+    "See selected PlotArmour projects across multiplayer games, AI platforms, and legal learning products.",
+  path: "/work",
+  keywords: ["selected work", "games", "AI products", "CourtWise AI", "Candor AI", "Battalion"],
+});
 
 export default function WorkPage() {
   return (

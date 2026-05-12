@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { DetailPage } from "@/components/detail-page";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Studio",
+  description:
+    "Explore the PlotArmour studio for brand systems, product development, game systems, and high-control digital execution.",
+  path: "/studio",
+  keywords: ["studio", "brand design", "product development", "game systems"],
+});
 
 export default function StudioPage() {
   return (

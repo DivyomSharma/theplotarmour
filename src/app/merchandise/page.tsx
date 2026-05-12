@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { DetailPage } from "@/components/detail-page";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Merchandise",
+  description:
+    "Discover PlotArmour merchandise systems for bulk apparel, event merchandise, community programs, and production-led execution.",
+  path: "/merchandise",
+  keywords: ["merchandise", "bulk apparel", "event merchandise", "community merchandise"],
+});
 
 export default function MerchandisePage() {
   return (

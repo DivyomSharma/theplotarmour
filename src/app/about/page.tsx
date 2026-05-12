@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { DetailPage } from "@/components/detail-page";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "About",
+  description:
+    "Learn how PlotArmour operates as a multi-vertical system across identity, products, games, merchandise, and culture-facing commerce.",
+  path: "/about",
+  keywords: ["about PlotArmour", "multi-vertical company", "brand and product systems"],
+});
 
 export default function AboutPage() {
   return (
