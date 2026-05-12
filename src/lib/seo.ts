@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "PlotArmour",
   url: "https://theplotarmour.xyz",
+  lastModified: "2026-05-12",
   description:
     "PlotArmour builds brands, products, games, and merchandise systems through a unified pipeline spanning design, development, production, and distribution.",
   locale: "en_US",
