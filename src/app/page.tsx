@@ -4,13 +4,13 @@ import { workItems } from "@/lib/site-data";
 import { HomePage } from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title: "PlotArmour | Brands, Products, Games, and Merchandise Systems",
+  title: siteConfig.name,
   description: siteConfig.description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "PlotArmour | Brands, Products, Games, and Merchandise Systems",
+    title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PlotArmour | Brands, Products, Games, and Merchandise Systems",
+    title: siteConfig.name,
     description: siteConfig.description,
   },
 };
