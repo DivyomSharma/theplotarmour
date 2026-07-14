@@ -1,32 +1,29 @@
 import type { Metadata } from "next";
-import { Sora, Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import { AppExperience } from "@/components/app-experience";
 import { siteConfig } from "@/lib/seo";
 import "./globals.css";
 
-const displayFont = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
-const bodyFont = Sora({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: siteConfig.name,
+  title: {
+    default: siteConfig.name,
+    template: `%s — ${siteConfig.name}`,
+  },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: siteConfig.keywords,
   category: "technology",
-  authors: [{ name: siteConfig.name }],
+  authors: [{ name: "PlotArmour Group" }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   robots: {
     index: true,
     follow: true,
@@ -55,15 +52,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      data-scroll-behavior="smooth"
-      className={`${displayFont.variable} ${bodyFont.variable}`}
-    >
+    <html lang="en" className={inter.variable}>
       <body>
         <AppExperience>{children}</AppExperience>
       </body>

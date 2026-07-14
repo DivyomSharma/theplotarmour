@@ -3,58 +3,63 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { navItems } from "@/lib/site-data";
-
-function resolveActiveHref(pathname: string) {
-  if (pathname === "/") {
-    return "";
-  }
-
-  return navItems.find((item) => pathname === item.href || pathname.startsWith(`${item.href}/`))
-    ?.href ?? "";
-}
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const [pendingHref, setPendingHref] = useState("");
-  const activeHref = pendingHref || resolveActiveHref(pathname);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    setPendingHref("");
-  }, [pathname]);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-40">
-      <div className="section-shell flex items-center justify-between gap-6 py-6">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled ? "border-b border-[var(--border)] bg-black/80 backdrop-blur-xl" : ""
+      }`}
+    >
+      <div className="container-wide flex items-center justify-between gap-8 py-5">
+        {/* Wordmark */}
         <Link
           href="/"
-          className="font-display text-sm uppercase tracking-[0.4em] text-white/88 transition duration-300 hover:text-white"
+          className="text-sm font-semibold tracking-tight text-white/90 transition-colors hover:text-white"
         >
           PlotArmour
         </Link>
-        <nav className="hidden items-center rounded-full border border-white/10 bg-black/25 p-1.5 text-sm text-white/68 shadow-[0_18px_50px_rgba(0,0,0,0.24)] backdrop-blur md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setPendingHref(item.href)}
-              aria-current={activeHref === item.href ? "page" : undefined}
-              className={`nav-pill-link ${
-                activeHref === item.href ? "text-white" : "text-white/68 hover:text-white"
-              }`}
-            >
-              {activeHref === item.href ? (
-                <motion.span
-                  layoutId="nav-pill"
-                  className="nav-pill-bg absolute inset-0 -z-10 rounded-full border border-white/10"
-                  transition={{ type: "spring", stiffness: 420, damping: 34, mass: 0.8 }}
-                />
-              ) : null}
-              {item.label}
-            </Link>
-          ))}
+
+        {/* Nav */}
+        <nav className="hidden items-center gap-1 md:flex">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative rounded-full px-3.5 py-1.5 text-sm transition-colors ${
+                  isActive ? "text-white" : "text-[var(--fg-muted)] hover:text-white"
+                }`}
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute inset-0 -z-10 rounded-full bg-white/8"
+                    transition={{ type: "spring", stiffness: 500, damping: 40 }}
+                  />
+                )}
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
+
+        {/* CTA */}
+        <Link href="/contact" className="btn-primary hidden text-sm md:inline-flex" style={{ padding: "0.5rem 1.25rem" }}>
+          Get in touch
+        </Link>
       </div>
     </header>
   );

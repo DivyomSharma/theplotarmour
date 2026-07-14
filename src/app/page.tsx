@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/seo";
-import { workItems } from "@/lib/site-data";
 import { HomePage } from "@/components/home-page";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
@@ -17,46 +14,34 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-  },
 };
 
-const structuredData = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    logo: `${siteConfig.url}/icon.svg`,
-    description: siteConfig.description,
-    knowsAbout: [
-      "Brand systems",
-      "Product development",
-      "Game development",
-      "Merchandise systems",
-      "Fashion and consumer products",
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "PlotArmour Group",
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/icon.png`,
+  description: siteConfig.description,
+  knowsAbout: [
+    "Venture Studio",
+    "Technology Holding Company",
+    "Workforce Infrastructure",
+    "Manufacturing Software",
+    "Enterprise Operations",
+    "Talent Infrastructure",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "PlotArmour Portfolio Companies",
+    itemListElement: [
+      { "@type": "Offer", name: "Convoke", description: "Talent & Community Infrastructure" },
+      { "@type": "Offer", name: "Keystone", description: "Enterprise Workforce Infrastructure" },
+      { "@type": "Offer", name: "Verity", description: "Enterprise Operations Platform" },
+      { "@type": "Offer", name: "VEDA", description: "Manufacturing Operations Platform" },
     ],
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    description: siteConfig.description,
-    inLanguage: "en",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: "PlotArmour - Main Site",
-    url: siteConfig.url,
-    description: siteConfig.description,
-    about: workItems.map((item) => item.name),
-  },
-];
+};
 
 export default function Page() {
   return (
