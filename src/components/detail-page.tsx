@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import type { NavItem } from "@/lib/site-data";
 
 type DetailPageProps = {
@@ -20,62 +21,75 @@ export function DetailPage({
   ctas,
 }: DetailPageProps) {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#040507] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(249,115,22,0.14),_transparent_28%),radial-gradient(circle_at_80%_10%,_rgba(14,165,233,0.16),_transparent_24%)]" />
-      <SiteHeader />
-      <section className="section-shell relative z-10 flex min-h-screen flex-col justify-center gap-12 py-28">
-        <div className="max-w-4xl space-y-6">
-          <p className="section-label">{eyebrow}</p>
-          <h1 className="font-display max-w-4xl text-5xl uppercase tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-            {title}
-          </h1>
-          <p className="max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">
-            {summary}
-          </p>
-        </div>
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--fg)] flex flex-col justify-between">
+      <div>
+        <SiteHeader />
 
-        <div className="grid gap-5 lg:grid-cols-[1.4fr_0.9fr]">
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur">
-            <p className="section-label">Focus</p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {highlights.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 text-lg text-white/84"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+        <main className="container py-16 lg:py-24">
+          {/* Header */}
+          <div className="max-w-4xl space-y-6">
+            <div className="magazine-label">{eyebrow}</div>
+            <h1 className="font-serif text-[clamp(2.5rem,7vw,4.5rem)] font-bold leading-[1.08] tracking-tight text-[var(--fg)]">
+              {title}
+            </h1>
+            <p className="font-serif text-xl md:text-2xl italic leading-relaxed text-[var(--fg-muted)]">
+              {summary}
+            </p>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 backdrop-blur">
-            <p className="section-label">Next</p>
-            <div className="mt-6 flex flex-col gap-3">
-              {liveUrl ? (
-                <a
-                  href={liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="cta-primary"
-                >
-                  Open Live Site
-                </a>
-              ) : null}
+          <div className="hairline my-12" />
 
-              {ctas.map((cta) => (
-                <Link
-                  key={cta.href}
-                  href={cta.href}
-                  className="cta-secondary"
-                >
-                  {cta.label}
-                </Link>
-              ))}
+          {/* Body */}
+          <div className="grid gap-12 lg:grid-cols-[1.6fr_0.8fr]">
+            {/* Highlights */}
+            <div className="space-y-6">
+              <h2 className="text-xs font-mono uppercase tracking-wider text-[var(--fg-subtle)]">
+                Core Directives
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="editorial-card rounded-xl p-6 border border-[var(--border)] bg-[var(--surface)] text-[var(--fg)] hover:border-[var(--border-hover)]"
+                  >
+                    <p className="text-sm font-medium leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="space-y-6">
+              <h2 className="text-xs font-mono uppercase tracking-wider text-[var(--fg-subtle)]">
+                Actions
+              </h2>
+              <div className="flex flex-col gap-3">
+                {liveUrl && (
+                  <a
+                    href={liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary w-full text-center justify-center"
+                  >
+                    Launch Live Site ↗
+                  </a>
+                )}
+                {ctas.map((cta) => (
+                  <Link
+                    key={cta.href}
+                    href={cta.href}
+                    className="btn-secondary w-full text-center justify-center"
+                  >
+                    {cta.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </main>
+      </div>
+
+      <SiteFooter />
+    </div>
   );
 }

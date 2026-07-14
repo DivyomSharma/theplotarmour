@@ -1,37 +1,33 @@
 import Link from "next/link";
 import { companies, navItems } from "@/lib/site-data";
 
-const contactLinks = [
-  { label: "General", email: "hello@theplotarmour.xyz" },
-  { label: "Partnerships", email: "partnerships@theplotarmour.xyz" },
-  { label: "Press", email: "press@theplotarmour.xyz" },
-  { label: "Careers", email: "careers@theplotarmour.xyz" },
-];
-
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[var(--border)] bg-black">
+    <footer className="border-t border-[var(--border)] bg-[var(--bg)] mt-20">
       <div className="container py-16">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <p className="text-sm font-semibold text-white">PlotArmour Group</p>
+          {/* Masthead / Info */}
+          <div>
+            <p className="font-serif text-lg font-bold text-[var(--fg)]">PlotArmour Group</p>
+            <p className="mt-4 text-xs font-mono uppercase tracking-wider text-[var(--fg-subtle)]">
+              EST. 2023 · IN
+            </p>
             <p className="mt-2 text-xs leading-relaxed text-[var(--fg-muted)]">
-              Venture Studio & Technology Holding Company.
-              <br />
-              Building infrastructure companies.
+              Building category-defining infrastructure companies across modern enterprise operations.
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Directory */}
           <div>
-            <p className="mb-4 text-xs font-medium uppercase tracking-wider text-[var(--fg-subtle)]">Navigation</p>
+            <p className="text-xs font-mono uppercase tracking-wider text-[var(--fg-subtle)] mb-4">
+              Directory
+            </p>
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[var(--fg-muted)] transition-colors hover:text-white"
+                    className="text-sm text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -42,66 +38,63 @@ export function SiteFooter() {
 
           {/* Companies */}
           <div>
-            <p className="mb-4 text-xs font-medium uppercase tracking-wider text-[var(--fg-subtle)]">Companies</p>
+            <p className="text-xs font-mono uppercase tracking-wider text-[var(--fg-subtle)] mb-4">
+              Sections
+            </p>
             <ul className="space-y-2">
               {companies.map((c) => (
-                <li key={c.slug} className="flex items-center gap-2">
-                  <span
-                    className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
-                    style={{ background: c.accentColor }}
-                  />
-                  {c.url ? (
-                    <a
-                      href={c.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm text-[var(--fg-muted)] transition-colors hover:text-white"
-                    >
-                      {c.name}
-                    </a>
-                  ) : (
-                    <Link
-                      href={`/companies#${c.slug}`}
-                      className="text-sm text-[var(--fg-muted)] transition-colors hover:text-white"
-                    >
-                      {c.name}
-                    </Link>
-                  )}
+                <li key={c.slug}>
+                  <Link
+                    href={`/companies#${c.slug}`}
+                    className="text-sm text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors flex items-center gap-2"
+                  >
+                    <span
+                      className="h-1.5 w-1.5 rounded-full"
+                      style={{ background: c.accentColor }}
+                    />
+                    {c.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Inquiries */}
           <div>
-            <p className="mb-4 text-xs font-medium uppercase tracking-wider text-[var(--fg-subtle)]">Contact</p>
-            <ul className="space-y-2">
-              {contactLinks.map((c) => (
-                <li key={c.label}>
-                  <a
-                    href={`mailto:${c.email}`}
-                    className="text-sm text-[var(--fg-muted)] transition-colors hover:text-white"
-                  >
-                    {c.label}
-                  </a>
-                </li>
-              ))}
+            <p className="text-xs font-mono uppercase tracking-wider text-[var(--fg-subtle)] mb-4">
+              Inquiries
+            </p>
+            <ul className="space-y-2 text-sm text-[var(--fg-muted)]">
+              <li>
+                <span>General: </span>
+                <a href="mailto:hello@theplotarmour.xyz" className="text-[var(--fg)] hover:underline">
+                  hello@theplotarmour.xyz
+                </a>
+              </li>
+              <li>
+                <span>Partners: </span>
+                <a href="mailto:partnerships@theplotarmour.xyz" className="text-[var(--fg)] hover:underline">
+                  partnerships@theplotarmour.xyz
+                </a>
+              </li>
+              <li>
+                <span>Careers: </span>
+                <a href="mailto:careers@theplotarmour.xyz" className="text-[var(--fg)] hover:underline">
+                  careers@theplotarmour.xyz
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-[var(--border)] pt-8 sm:flex-row sm:items-center">
-          <p className="text-xs text-[var(--fg-subtle)]">
-            © {new Date().getFullYear()} PlotArmour Group. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-xs text-[var(--fg-subtle)] transition-colors hover:text-[var(--fg-muted)]">
-              Privacy
-            </a>
-            <a href="#" className="text-xs text-[var(--fg-subtle)] transition-colors hover:text-[var(--fg-muted)]">
-              Terms
-            </a>
+        <div className="mt-12 pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--fg-subtle)] font-mono">
+          <p>© {new Date().getFullYear()} PlotArmour Group. All rights reserved.</p>
+          <div className="flex gap-4">
+            <span className="flex items-center gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
+              SYSTEMS ONLINE
+            </span>
           </div>
         </div>
       </div>
