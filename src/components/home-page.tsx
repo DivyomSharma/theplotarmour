@@ -24,7 +24,7 @@ export function HomePage() {
       <SiteHeader />
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
-      <section className="relative flex min-h-dvh flex-col justify-end pb-20 pt-32">
+      <section className="relative flex min-h-[85vh] flex-col justify-center py-20 md:py-32">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 32 }}
@@ -33,10 +33,10 @@ export function HomePage() {
             className="max-w-5xl"
           >
             <p className="label mb-8">PlotArmour Group</p>
-            <h1 className="text-balance text-[clamp(3rem,7vw,6.5rem)] font-semibold leading-[1.0] tracking-[-0.03em] text-white">
+            <h1 className="text-balance text-[clamp(2.5rem,6.5vw,5.5rem)] font-semibold leading-[1.08] tracking-[-0.03em] text-white">
               Building the infrastructure behind tomorrow's industries.
             </h1>
-            <p className="mt-8 max-w-2xl text-[1.25rem] leading-[1.6] text-[var(--fg-muted)]">
+            <p className="mt-8 max-w-2xl text-[1.2rem] leading-[1.6] text-[var(--fg-muted)]">
               PlotArmour builds independent companies that solve fundamental operational problems across industries.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -51,7 +51,7 @@ export function HomePage() {
         </div>
 
         {/* bottom rule */}
-        <div className="container mt-20">
+        <div className="container mt-16">
           <div className="hairline" />
         </div>
       </section>
