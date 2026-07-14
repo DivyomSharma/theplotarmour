@@ -39,7 +39,7 @@ export default function CareersPage() {
   return (
     <>
       <SiteHeader />
-      <main className="bg-black text-white">
+      <main className="bg-[var(--bg)] text-[var(--fg)]">
         {/* Header */}
         <section className="section pt-32">
           <div className="container">
@@ -60,8 +60,8 @@ export default function CareersPage() {
             <p className="label mb-8">What we value</p>
             <div className="grid gap-px border border-[var(--border)] rounded-2xl overflow-hidden bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-3">
               {values.map((v) => (
-                <div key={v.title} className="bg-black p-6">
-                  <p className="font-semibold text-white">{v.title}</p>
+                <div key={v.title} className="bg-[var(--surface)] p-6">
+                  <p className="font-semibold text-[var(--fg)]">{v.title}</p>
                   <p className="mt-2 text-sm leading-relaxed text-[var(--fg-muted)]">{v.body}</p>
                 </div>
               ))}
@@ -81,7 +81,7 @@ export default function CareersPage() {
                   className="flex flex-col gap-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--border-hover)] sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div>
-                    <p className="font-semibold text-white">{role.title}</p>
+                    <p className="font-semibold text-[var(--fg)]">{role.title}</p>
                     <p className="text-sm text-[var(--fg-muted)]">{role.company} · {role.location}</p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -113,14 +113,14 @@ export default function CareersPage() {
                   key={role.title}
                   className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5"
                 >
-                  <p className="font-semibold text-white">{role.title}</p>
+                  <p className="font-semibold text-[var(--fg)]">{role.title}</p>
                   <p className="mt-1 text-sm text-[var(--fg-muted)]">{role.company} · {role.duration}</p>
                 </div>
               ))}
             </div>
             <p className="mt-6 text-sm text-[var(--fg-muted)]">
               All internship applications:{" "}
-              <a href="mailto:careers@theplotarmour.xyz" className="text-white underline-offset-2 hover:underline">
+              <a href="mailto:careers@theplotarmour.xyz" className="text-[var(--fg)] underline underline-offset-2 hover:text-[var(--fg)]">
                 careers@theplotarmour.xyz
               </a>
             </p>

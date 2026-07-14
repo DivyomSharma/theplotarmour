@@ -25,7 +25,7 @@ export default function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <main className="bg-black text-white">
+      <main className="bg-[var(--bg)] text-[var(--fg)]">
         {/* Header */}
         <section className="section pt-32">
           <div className="container">
@@ -66,13 +66,13 @@ export default function AboutPage() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8">
                 <p className="label mb-4">Mission</p>
-                <p className="text-xl font-semibold leading-snug text-white">
+                <p className="text-xl font-semibold leading-snug text-[var(--fg)]">
                   Build infrastructure companies that redefine how industries operate.
                 </p>
               </div>
               <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8">
                 <p className="label mb-4">Vision</p>
-                <p className="text-xl font-semibold leading-snug text-white">
+                <p className="text-xl font-semibold leading-snug text-[var(--fg)]">
                   To become one of India's most respected technology groups by building category-defining businesses that solve real operational problems.
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
               ].map(([prefix, suffix]) => (
                 <div key={prefix} className="py-5 text-xl font-medium">
                   <span className="text-[var(--fg-muted)]">{prefix} </span>
-                  <span className="text-white">{suffix}</span>
+                  <span className="text-[var(--fg)]">{suffix}</span>
                 </div>
               ))}
             </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   >
                     <p className="text-sm font-medium tabular-nums text-[var(--fg-subtle)]">{step.step}</p>
                     <div>
-                      <p className="font-semibold text-white">{step.title}</p>
+                      <p className="font-semibold text-[var(--fg)]">{step.title}</p>
                       <p className="mt-1 text-sm leading-relaxed text-[var(--fg-muted)]">{step.description}</p>
                     </div>
                   </div>
@@ -137,7 +137,7 @@ export default function AboutPage() {
           <div className="container">
             <div className="hairline mb-12" />
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-lg text-lg font-medium text-white">
+              <p className="max-w-lg text-lg font-medium text-[var(--fg)]">
                 Interested in what we are building?
               </p>
               <div className="flex gap-3">

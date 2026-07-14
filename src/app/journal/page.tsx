@@ -51,7 +51,7 @@ export default function JournalPage() {
   return (
     <>
       <SiteHeader />
-      <main className="bg-black text-white">
+      <main className="bg-[var(--bg)] text-[var(--fg)]">
         {/* Header */}
         <section className="section pt-32">
           <div className="container">
@@ -82,7 +82,7 @@ export default function JournalPage() {
                           {entry.category}
                         </span>
                       </div>
-                      <h2 className="text-xl font-semibold leading-snug text-white transition-colors group-hover:text-white/80 sm:text-2xl">
+                      <h2 className="text-xl font-semibold leading-snug text-[var(--fg)] transition-colors group-hover:text-[var(--fg)]/80 sm:text-2xl">
                         {entry.title}
                       </h2>
                       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--fg-muted)]">
@@ -90,7 +90,7 @@ export default function JournalPage() {
                       </p>
                     </div>
                     <div className="flex-shrink-0 sm:pl-8 sm:pt-1">
-                      <span className="text-sm text-[var(--fg-subtle)] transition-colors group-hover:text-white">
+                      <span className="text-sm text-[var(--fg-subtle)] transition-colors group-hover:text-[var(--fg)]">
                         Read →
                       </span>
                     </div>
@@ -106,7 +106,7 @@ export default function JournalPage() {
           <div className="container">
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 sm:p-10">
               <p className="label mb-4">Stay informed</p>
-              <p className="max-w-lg text-lg font-medium text-white">
+              <p className="max-w-lg text-lg font-medium text-[var(--fg)]">
                 We write infrequently, but when we do, it is worth reading.
               </p>
               <p className="mt-2 text-sm text-[var(--fg-muted)]">

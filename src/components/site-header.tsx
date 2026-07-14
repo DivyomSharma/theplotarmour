@@ -18,14 +18,17 @@ export function SiteHeader() {
             PlotArmour
           </Link>
         </div>
-        <nav className="flex flex-wrap items-center gap-x-5 gap-y-2">
+        <nav 
+          className="flex items-center gap-x-5 overflow-x-auto whitespace-nowrap max-w-full pb-1 -mb-1 scrollbar-none"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {navItems.map((item) => {
             const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-sans text-xs uppercase tracking-wider transition-colors py-1 ${
+                className={`font-sans text-xs uppercase tracking-wider transition-colors py-1 shrink-0 ${
                   isActive
                     ? "text-[var(--fg)] font-semibold border-b border-[var(--fg)]"
                     : "text-[var(--fg-muted)] hover:text-[var(--fg)]"

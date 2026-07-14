@@ -43,7 +43,7 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <main className="bg-black text-white">
+      <main className="bg-[var(--bg)] text-[var(--fg)]">
         {/* Header */}
         <section className="section pt-32">
           <div className="container">
@@ -68,10 +68,10 @@ export default function ContactPage() {
                   className="group flex flex-col gap-2 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 transition-all hover:border-[var(--border-hover)] hover:bg-[var(--surface-hover)] sm:flex-row sm:items-center sm:justify-between sm:gap-8"
                 >
                   <div>
-                    <p className="font-semibold text-white">{ch.label}</p>
+                    <p className="font-semibold text-[var(--fg)]">{ch.label}</p>
                     <p className="mt-1 text-sm text-[var(--fg-muted)]">{ch.description}</p>
                   </div>
-                  <p className="flex-shrink-0 text-sm text-[var(--fg-muted)] transition-colors group-hover:text-white">
+                  <p className="flex-shrink-0 text-sm text-[var(--fg-muted)] transition-colors group-hover:text-[var(--fg)]">
                     {ch.email} →
                   </p>
                 </a>

@@ -27,11 +27,11 @@ export default function StudioPage() {
   return (
     <>
       <SiteHeader />
-      <main className="bg-black text-white">
+      <main className="bg-[var(--bg)] text-[var(--fg)]">
         {/* Header */}
         <section className="section pt-32">
           <div className="container">
-            <p className="label mb-6" style={{ color: "#7c3aed" }}>PlotArmour Studio</p>
+            <p className="label mb-6 text-purple-600 dark:text-purple-400">PlotArmour Studio</p>
             <h1 className="max-w-4xl text-balance text-5xl font-semibold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
               The execution engine behind the portfolio.
             </h1>
@@ -68,8 +68,8 @@ export default function StudioPage() {
             <p className="label mb-8">Capabilities</p>
             <div className="grid gap-px border border-[var(--border)] rounded-2xl overflow-hidden bg-[var(--border)] sm:grid-cols-2 lg:grid-cols-4">
               {capabilities.map((cap) => (
-                <div key={cap.name} className="bg-black p-6">
-                  <p className="font-semibold text-white">{cap.name}</p>
+                <div key={cap.name} className="bg-[var(--surface)] p-6">
+                  <p className="font-semibold text-[var(--fg)]">{cap.name}</p>
                   <p className="mt-2 text-sm leading-relaxed text-[var(--fg-muted)]">{cap.description}</p>
                 </div>
               ))}
@@ -82,7 +82,7 @@ export default function StudioPage() {
           <div className="container">
             <div className="hairline mb-12" />
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-lg text-lg font-medium text-white">
+              <p className="max-w-lg text-lg font-medium text-[var(--fg)]">
                 See Studio's full portfolio of work.
               </p>
               <div className="flex gap-3">
