@@ -31,8 +31,8 @@ export default function PressPage() {
               <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
                 For news queries, statements from founder Divyom Sharma, or requests for comment, reach out to our media desk.
               </p>
-              <a href="mailto:press@theplotarmour.xyz" className="btn-secondary mt-6 inline-flex">
-                press@theplotarmour.xyz
+              <a href="mailto:press@plotarmour.in" className="btn-secondary mt-6 inline-flex">
+                press@plotarmour.in
               </a>
             </div>
             <div className="editorial-card rounded-2xl border border-[var(--border)] p-8 bg-[var(--surface)]">

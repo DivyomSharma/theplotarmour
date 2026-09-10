@@ -89,7 +89,7 @@ export default function CareersPage() {
                       {role.type}
                     </span>
                     <a
-                      href="mailto:careers@theplotarmour.xyz"
+                      href="mailto:careers@plotarmour.in"
                       className="btn-secondary text-sm"
                       style={{ padding: "0.4rem 1rem" }}
                     >
@@ -120,8 +120,8 @@ export default function CareersPage() {
             </div>
             <p className="mt-6 text-sm text-[var(--fg-muted)]">
               All internship applications:{" "}
-              <a href="mailto:careers@theplotarmour.xyz" className="text-[var(--fg)] underline underline-offset-2 hover:text-[var(--fg)]">
-                careers@theplotarmour.xyz
+              <a href="mailto:careers@plotarmour.in" className="text-[var(--fg)] underline underline-offset-2 hover:text-[var(--fg)]">
+                careers@plotarmour.in
               </a>
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function CareersPage() {
                 We always want to hear from exceptional people.
               </h2>
               <div className="mt-8">
-                <a href="mailto:careers@theplotarmour.xyz" className="btn-primary">
+                <a href="mailto:careers@plotarmour.in" className="btn-primary">
                   Introduce yourself
                 </a>
               </div>

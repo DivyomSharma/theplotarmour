@@ -16,7 +16,7 @@ export default function MerchandisePage() {
       eyebrow="Merchandise"
       title="Bulk apparel, event systems, and community production."
       summary="The merchandise vertical is built to supply scale apparel for distributed teams, events, and active communities with high-control execution."
-      liveUrl="https://merch.theplotarmour.xyz"
+      liveUrl="https://merch.plotarmour.in"
       highlights={[
         "Apparel systems designed to perform at scale",
         "Community and event merchandise coordination",

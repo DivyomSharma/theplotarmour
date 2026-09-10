@@ -74,10 +74,10 @@ It should frame the ecosystem, not replace the sub-sites.
 
 ## Live Ecosystem Links
 
-- Main site: `theplotarmour.xyz` or equivalent main domain
-- Studio: `https://studio.theplotarmour.xyz`
-- Merchandise: `https://merch.theplotarmour.xyz`
-- Store: `https://store.theplotarmour.xyz`
+- Main site: `plotarmour.in` or equivalent main domain
+- Studio: `https://studio.plotarmour.in`
+- Merchandise: `https://merch.plotarmour.in`
+- Store: `https://store.plotarmour.in`
 
 Referenced live product/project links:
 

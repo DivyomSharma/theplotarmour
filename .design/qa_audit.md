@@ -45,4 +45,4 @@ This document presents a Design QA audit of the front-end implementation in `the
 
 ### Inconsistent Recruitment Branding
 * **Location**: `src/components/site-footer.tsx` vs `plotarmour-studio`
-* **Issue**: The footer on the main site references inquiries at `careers@theplotarmour.xyz`. However, the Studio repository's team/career pages direct applicants to `career.theplotarmour@gmail.com`. This discrepancy breaks official brand trust.
+* **Issue**: The footer on the main site references inquiries at `careers@plotarmour.in`. However, the Studio repository's team/career pages direct applicants to `career.theplotarmour@gmail.com`. This discrepancy breaks official brand trust.

@@ -87,7 +87,7 @@ export default function StudioPage() {
               </p>
               <div className="flex gap-3">
                 <a
-                  href="https://studio.theplotarmour.xyz"
+                  href="https://studio.plotarmour.in"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-primary"

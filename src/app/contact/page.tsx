@@ -14,27 +14,27 @@ export const metadata: Metadata = buildMetadata({
 const channels = [
   {
     label: "General",
-    email: "hello@theplotarmour.xyz",
+    email: "hello@plotarmour.in",
     description: "Questions about PlotArmour, our model, or the portfolio.",
   },
   {
     label: "Partnerships",
-    email: "partnerships@theplotarmour.xyz",
+    email: "partnerships@plotarmour.in",
     description: "Strategic partnerships, distribution, and commercial opportunities.",
   },
   {
     label: "Press",
-    email: "press@theplotarmour.xyz",
+    email: "press@plotarmour.in",
     description: "Media enquiries, interviews, and editorial requests.",
   },
   {
     label: "Careers",
-    email: "careers@theplotarmour.xyz",
+    email: "careers@plotarmour.in",
     description: "Roles, internships, and open applications.",
   },
   {
     label: "Founder",
-    email: "founder@theplotarmour.xyz",
+    email: "founder@plotarmour.in",
     description: "Direct conversations about investing, co-building, or strategic alignment.",
   },
 ];

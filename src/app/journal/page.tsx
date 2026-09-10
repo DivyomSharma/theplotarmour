@@ -113,7 +113,7 @@ export default function JournalPage() {
                 Updates on our companies, the industries we operate in, and how we think about building.
               </p>
               <div className="mt-6">
-                <a href="mailto:hello@theplotarmour.xyz?subject=Journal updates" className="btn-secondary">
+                <a href="mailto:hello@plotarmour.in?subject=Journal updates" className="btn-secondary">
                   Get updates
                 </a>
               </div>

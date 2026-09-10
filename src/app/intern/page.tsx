@@ -55,7 +55,7 @@ export default function InternPage() {
               Role fits are evaluated based on execution capacity, portfolios, and alignment with active system builds.
             </p>
             <a
-              href="mailto:careers@theplotarmour.xyz?subject=Internship Application"
+              href="mailto:careers@plotarmour.in?subject=Internship Application"
               className="btn-primary"
             >
               Submit Application

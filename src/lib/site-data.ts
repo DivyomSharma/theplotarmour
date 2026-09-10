@@ -120,7 +120,7 @@ export const companies: Company[] = [
     status: "Live",
     accentColor: "#7c3aed",
     accentBg: "rgba(124, 58, 237, 0.08)",
-    url: "https://studio.theplotarmour.xyz",
+    url: "https://studio.plotarmour.in",
   },
   {
     slug: "store",
@@ -133,7 +133,7 @@ export const companies: Company[] = [
     status: "Planned",
     accentColor: "#525252",
     accentBg: "rgba(82, 82, 82, 0.08)",
-    url: "https://store.theplotarmour.xyz",
+    url: "https://store.plotarmour.in",
   },
 ];
 

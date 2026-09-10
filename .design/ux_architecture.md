@@ -147,7 +147,7 @@ The studio portal is designed to attract founders, operators, and developers by 
     *   Rounded outer shell with `1px border-white/[0.08]` and frosted dark backdrop (`bg-black/60 backdrop-blur-xl`).
     *   Left side: Snappy link-pill `PlotArmour Studio`.
     *   Center: Horizontal nav controls mapping home anchors (`#pipeline`, `#capabilities`, `#ventures`, `#blueprints`, `#experiments`) and internal routes (`/research`, `/blueprints`, `/team`, `/intern`).
-    *   Right side: Distinct outbound link `Ecosystem` with an `ArrowUpRight` icon to route users back to `theplotarmour.xyz`.
+    *   Right side: Distinct outbound link `Ecosystem` with an `ArrowUpRight` icon to route users back to `plotarmour.in`.
 
 ### C. Homepage Layout Flow & Section Ordering
 The studio landing page follows a sequence mapping the entire venture-building pipeline from origin to spinout.

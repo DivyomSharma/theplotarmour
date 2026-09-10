@@ -67,20 +67,20 @@ export function SiteFooter() {
             <ul className="space-y-2 text-sm text-[var(--fg-muted)]">
               <li>
                 <span>General: </span>
-                <a href="mailto:hello@theplotarmour.xyz" className="text-[var(--fg)] hover:underline">
-                  hello@theplotarmour.xyz
+                <a href="mailto:hello@plotarmour.in" className="text-[var(--fg)] hover:underline">
+                  hello@plotarmour.in
                 </a>
               </li>
               <li>
                 <span>Partners: </span>
-                <a href="mailto:partnerships@theplotarmour.xyz" className="text-[var(--fg)] hover:underline">
-                  partnerships@theplotarmour.xyz
+                <a href="mailto:partnerships@plotarmour.in" className="text-[var(--fg)] hover:underline">
+                  partnerships@plotarmour.in
                 </a>
               </li>
               <li>
                 <span>Careers: </span>
-                <a href="mailto:careers@theplotarmour.xyz" className="text-[var(--fg)] hover:underline">
-                  careers@theplotarmour.xyz
+                <a href="mailto:careers@plotarmour.in" className="text-[var(--fg)] hover:underline">
+                  careers@plotarmour.in
                 </a>
               </li>
             </ul>

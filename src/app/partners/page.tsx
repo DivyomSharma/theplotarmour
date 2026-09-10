@@ -30,7 +30,7 @@ export default function PartnersPage() {
             <p className="text-sm text-[var(--fg-muted)] leading-relaxed max-w-xl mx-auto">
               We look for operators, distribution networks, and strategic firms inside manufacturing, logistics, healthcare, and enterprise staffing.
             </p>
-            <a href="mailto:partnerships@theplotarmour.xyz" className="btn-primary mt-6 inline-flex">
+            <a href="mailto:partnerships@plotarmour.in" className="btn-primary mt-6 inline-flex">
               Discuss Alliances
             </a>
           </div>

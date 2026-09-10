@@ -16,7 +16,7 @@ export default function StorePage() {
       eyebrow="Store"
       title="Consumer lifestyle products and design drops."
       summary="The Store serves as the direct creative canvas for PlotArmour, dropping collections and collectibles reflecting our core design language."
-      liveUrl="https://store.theplotarmour.xyz"
+      liveUrl="https://store.plotarmour.in"
       highlights={[
         "Limited apparel collections and physical releases",
         "Direct-to-consumer digital and retail pathways",

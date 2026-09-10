@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "PlotArmour",
-  url: "https://theplotarmour.xyz",
+  url: "https://plotarmour.in",
   lastModified: "2026-07-14",
   description:
     "PlotArmour is an editorial technology ecosystem and venture studio building independent infrastructure companies across workforce, manufacturing, operations, and community.",
